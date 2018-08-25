@@ -1,6 +1,6 @@
 FROM openjdk:jre
 
-ADD /webapp.jar
+ADD ${project.build.directory}/${project.build.finalName}-swarm.jar /webapp.jar
 CMD java -jar /webapp.jar
 
 EXPOSE ${webapp.port}
